@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set default direction to RTL for Arabic */
+
+:root {
+    direction: rtl;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Default Arabic font settings */
+
+body {
+    font-family: "Readex Pro", "Baloo Bhaijaan 2", sans-serif;
+}
+
+
+/* Ensure form elements inherit RTL direction */
+
+input,
+textarea,
+select {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* Fix alignment for RTL layout */
+
+.flex {
+    flex-direction: row-reverse;
+}
+
+
+/* Adjust any LTR-specific elements */
+
+.ml-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.mr-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+
+/* Custom Fonts */
+
+.custom-font-baloo {
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.custom-font-readex {
+    font-family: "Readex Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "HEXP" 0;
+}
