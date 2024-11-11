@@ -19,13 +19,3 @@ export const validateRegistration = (formData) => {
 
     return { isValid: true, message: '' };
 };
-
-export const validateLogin = (values) => {
-    if (!values.email || !values.password) {
-        return { isValid: false, message: "Please fill in all fields" };
-    }
-    if (!/\S+@\S+\.\S+/.test(values.email)) {
-        return { isValid: false, message: "Please enter a valid email" };
-    }
-    return { isValid: true };
-};
