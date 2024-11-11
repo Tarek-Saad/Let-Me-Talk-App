@@ -7,6 +7,7 @@ module.exports.registerUser = async(req, res, next) => {
         const randomImage = `https://api.dicebear.com/6.x/bottts/svg?seed=${username}`;
         // create user
         const user = await User.create({ username, email, password: hashedPassword, avatarImage: randomImage });
+        delete user.password;
         res.status(201).json({
             status: "success",
             data: {
